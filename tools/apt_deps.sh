@@ -40,7 +40,6 @@ apt-get install -y zlib1g-dev \
                    libatlas-base-dev \
                    libiberty-dev \
                    liblapack-dev \
-                   cmake \
                    zip \
                    unzip \
                    sox \
