@@ -1,3 +1,3 @@
 #!/bin/bash
 
-sudo apt-get install -y npm && sudo npm install -g n && sudo n lts
+npm config set strict-ssl false && apt-get install -y npm && npm install -g n && sudo n lts
