@@ -12,7 +12,7 @@ if [ $? -eq 0 ]; then
 else
   wget -c "https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-linux-386.zip" \
   && unzip ngrok-stable-linux-386.zip \
-  && sudo killall ngrok || : \
-  && sudo cp ngrok /usr/bin/ngrok
+  && killall ngrok || : \
+  && cp ngrok /usr/bin/ngrok
   if [ $? -ne 0 ]; then exit 1; fi
 fi
