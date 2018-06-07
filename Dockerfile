@@ -25,6 +25,13 @@ RUN apt-get install -y make
 RUN mkdir -p /usr/local/lucida
 ADD . /usr/local/lucida
 WORKDIR "/usr/local/lucida/tools"
+RUN apt-get update
+RUN apt-get install -y software-properties-common
+RUN add-apt-repository ppa:george-edison55/cmake-3.x
+RUN apt-get update
+RUN apt-get install -y cmake
+RUN apt-get upgrade
+RUN apt-get update
 RUN /bin/bash apt_deps.sh
 RUN /bin/bash install_python.sh
 RUN /bin/bash install_java.sh
