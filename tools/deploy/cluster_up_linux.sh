@@ -1,6 +1,6 @@
 #!/bin/bash
 # Set up a local cluster via docker on a single machine.
-export K8S_VERSION=v1.3.0
+export K8S_VERSION=v1.10.4
 export ARCH=amd64
 docker run -d \
 --volume=/:/rootfs:ro \
