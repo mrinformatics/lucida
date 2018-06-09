@@ -14,7 +14,7 @@ spec:
         name: imm
     spec:
       containers:
-      - image: saadmemon/lucida:v2.3
+      - image: saadmemon/lucida5:latest
         command: ['/bin/sh', '-c']
         args: ['cd $LUCIDAROOT/imagematching/opencv_imm/server/ && ./imm_server']
         name: imm
