@@ -79,11 +79,5 @@ cd mongo-cxx-driver \
  && apt-get install scons \
  && scons --prefix=/usr/local --c++11=on --ssl --disable-warnings-as-errors=on install \
  && cd ..
-
-if installCheck "$0"; then
   echo "MongoDB and C++ driver installed";
   exit 0;
-else
-  echo "Failed to install MongoDB and C++ driver";
-  exit 1;
-fi
