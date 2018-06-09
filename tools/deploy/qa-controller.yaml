@@ -15,7 +15,7 @@ spec:
     spec:
       dnsPolicy: Default
       containers:
-      - image: saadmemon/lucida:v2.3
+      - image: saadmemon/lucida5:latest
         command: ['/bin/sh', '-c']
         # Delete " && export wiki_indri_index=/usr/local/lucida/lucida/questionanswering/OpenEphyra/db/wiki_indri_index"
         # if you don't want to use Wikipedia as an additional knowledge base.
