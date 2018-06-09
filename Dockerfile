@@ -42,14 +42,14 @@ RUN /bin/bash install_mongodb.sh
 WORKDIR "/usr/local/lucida/lucida"
 RUN /usr/bin/make
 RUN /bin/bash commandcenter/apache/install_apache.sh
+RUN /bin/bash speechrecognition/kaldi_gstreamer_asr/install_kaldi.sh
 RUN mkdir -p /etc/letsencrypt/live/host
 RUN mkdir -p /home/lucida_data/openephyra
 RUN wget http://web.eecs.umich.edu/~jahausw/download/wiki_indri_index.tar.gz
 RUN tar xzvf wiki_indri_index.tar.gz
 RUN rm wiki_indri_index.tar.gz
 RUN apt-get update
-RUN cd /usr/local/lucida/lucida/speechrecognition/kaldi_gstreamer_asr
-RUN sh install_kaldi.sh
+
 RUN echo "Congratulations, Your Image is Sucessfully Built" 
 ### function docker-flush(){
 ###     dockerlist=$(docker ps -a -q)
