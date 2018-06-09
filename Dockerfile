@@ -44,7 +44,8 @@ RUN /usr/bin/make
 RUN /bin/bash commandcenter/apache/install_apache.sh
 RUN /bin/bash speechrecognition/kaldi_gstreamer_asr/install_kaldi.sh
 RUN mkdir -p /etc/letsencrypt/live/host
-RUN mkdir -p /home/lucida_data/openephyra
+RUN mkdir -p /usr/local/lucida/lucida/questionanswering/OpenEphyra/db/
+RUN cd /usr/local/lucida/lucida/questionanswering/OpenEphyra/db/
 RUN wget http://web.eecs.umich.edu/~jahausw/download/wiki_indri_index.tar.gz
 RUN tar xzvf wiki_indri_index.tar.gz
 RUN rm wiki_indri_index.tar.gz
