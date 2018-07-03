@@ -9,7 +9,7 @@ include ./Makefile.common
 
 .PHONY: docker local
 
-## build docker environment
+## build the docker environment
 docker:
 	docker build -t $(DOCKER_CONTAINER):$(VERSION) .
 
